@@ -4,7 +4,7 @@ public class UsernameAlreadyUsedException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
-    public UsernameAlreadyUsedException() {
+    public UsernameAlreadyUsedException(String s) {
         super("Login name already used!");
     }
 }

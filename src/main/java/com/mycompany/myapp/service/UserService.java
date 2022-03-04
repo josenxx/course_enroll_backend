@@ -87,7 +87,8 @@ public class UserService {
             .ifPresent(existingUser -> {
                 boolean removed = removeNonActivatedUser(existingUser);
                 if (!removed) {
-                    throw new UsernameAlreadyUsedException();
+                    throw new UsernameAlreadyUsedException("No such user");
+                    //                    throw new UsernameAlreadyUsedException("No such user" + userName);
                 }
             });
         userRepository
